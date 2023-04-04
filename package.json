@@ -37,7 +37,9 @@
   },
   "description": "<a name=\"readme-top\"></a>",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "tailwindcss": "^3.3.1"
+  },
   "keywords": [
     "Ekpenisi",
     "Portfolio"
