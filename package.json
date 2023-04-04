@@ -34,5 +34,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "<a name=\"readme-top\"></a>",
+  "main": "index.js",
+  "devDependencies": {},
+  "keywords": [
+    "Ekpenisi",
+    "Portfolio"
+  ],
+  "author": "Ekpenisi Erue Raphael",
+  "license": "MIT"
 }
