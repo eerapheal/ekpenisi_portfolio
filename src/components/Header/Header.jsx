@@ -18,16 +18,24 @@ const Header = () => {
         <div className="menu">
           <ul className="flex items-center gap-10">
             <li>
-              <a className="text-smallTextColor font-[600]" href="#about">About</a>
+              <a className="text-smallTextColor font-[600] border-solid
+        border-smallTextColor py-2 px-4 rounded-[10px] max-h-[40px] hover:bg-smallTextColor
+        hover:text-white hover:font-[500] ease-in doration-700" href="#about">About</a>
             </li>
             <li>
-              <a className="text-smallTextColor font-[600]" href="#services">Services</a>
+              <a className="text-smallTextColor font-[600]  border-solid
+        border-smallTextColor py-2 px-4 rounded-[10px] max-h-[40px] hover:bg-smallTextColor
+        hover:text-white hover:font-[500] ease-in doration-700" href="#services">Services</a>
             </li>
             <li>
-              <a className="text-smallTextColor font-[600]" href="#portfolio">Portfolio</a>
+              <a className="text-smallTextColor font-[600] border-solid
+        border-smallTextColor py-2 px-4 rounded-[10px] max-h-[40px] hover:bg-smallTextColor
+        hover:text-white hover:font-[500] ease-in doration-700" href="#portfolio">Portfolio</a>
             </li>
             <li>
-              <a className="text-smallTextColor font-[600]" href="#contact">Contact</a>
+              <a className="text-smallTextColor font-[600] border-solid
+        border-smallTextColor py-2 px-4 rounded-[10px] max-h-[40px] hover:bg-smallTextColor
+        hover:text-white hover:font-[500] ease-in doration-700" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -36,7 +44,7 @@ const Header = () => {
         <button className="flex items-center gap-2 text-smallTextColor font-[600] border-solid
         border-smallTextColor py-2 px-4 rounded-[10px] max-h-[40px] hover:bg-smallTextColor
         hover:text-white hover:font-[500] ease-in doration-700">
-          <i class="ri-send-plane-line">Let talk</i>
+          <i class="ri-send-plane-line">Let's Connect</i>
         </button>
         <span className="text-2xl text-smallTextColor md:hidden cursor-pointer"><i class="ri-menu-line"></i></span>
         </div>
