@@ -7,7 +7,7 @@ const Header = () => {
       <div className="flex items-center justify-between">
         <div className=" flex items-center gap-[10px]">
           <span className="w-[35px] h-[45px] bg-primaryColor text-white text=[18px] font-[500] rounded-full flex items-center justify-center">
-          R
+          EeR
           </span>
           <div className="leading-[20px">
             <h2 className="text-xl text-smallTextColor font-[700]">Ekpenisi</h2>
@@ -30,6 +30,15 @@ const Header = () => {
               <a className="text-smallTextColor font-[600]" href="#contact">Contact</a>
             </li>
           </ul>
+        </div>
+
+        <div className=" flex items-center gap-4">
+        <button className="flex items-center gap-2 text-smallTextColor font-[600] border-solid
+        border-smallTextColor py-2 px-4 rounded-[10px] max-h-[40px] hover:bg-smallTextColor
+        hover:text-white hover:font-[500] ease-in doration-700">
+          <i class="ri-send-plane-line">Let talk</i>
+        </button>
+        <span className="text-2xl text-smallTextColor md:hidden cursor-pointer"><i class="ri-menu-line"></i></span>
         </div>
       </div>
       </div>
