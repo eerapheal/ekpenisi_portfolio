@@ -3,8 +3,9 @@ import Aos from 'aos';
 import './App.css';
 import Header from './components/Header/Header.jsx';
 import Footer from './components/Footer/Footer.jsx';
-
 import View from './components/View/View.jsx';
+import Service from './components/Service/Service.jsx';
+
 const App = () => {
     useEffect(()=> {
         Aos.init();
@@ -14,6 +15,7 @@ const App = () => {
     <Header />
     <main> 
       <View />
+      <Service />
      </main>
     <Footer />
     </>
