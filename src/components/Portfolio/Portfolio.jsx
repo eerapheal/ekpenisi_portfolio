@@ -1,7 +1,14 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import data from '../../assets/data/portfolioData';
 
 const Portfolio = () => {
+
+  const [nextItems, setNextItems] = useState(6);
+  const [portfolios, setPortfolios] = useState(data);
+
+  const loadMoreMandler = () => {
+    setNextItems(prev =>prev + 3 )
+  }
   return (
   <section id='portfolio'>
    <div className='container'>
@@ -33,15 +40,20 @@ const Portfolio = () => {
     </div>
 
     <div className='flex items-center gap-4 flex-wrap mt-12'>
-      {data?.map((portfolio, index) => (
-        <div className='group max-w-full sm:w-[48.5%] md:w-[31.8%] lg:w-[32.2%] relative z-[1]'>
+      {portfolios?.slice(0, nextItems)?.map((portfolio, index) => (
+        <div
+          key = {index}
+          data-aos='fade-zoom-in' data-aos-delay='20' data-aos-duration='1000'
+          className='group max-w-full sm:w-[48.5%] md:w-[31.8%] lg:w-[32.2%] relative z-[1]'
+        >
+          
          <figure>
           <img className="rounded-[8px]" src={portfolio.imgUrl} alt='portfolio-image'/>
          </figure>
 
-         <div className='w-full h-full bg-primaryColor bg-opacity-40 absolute top-0 left-0 z-[5] hidden group-hover:black'>
-         <div className=''>
-          <button className=''>
+         <div className='w-full h-full bg-primaryColor bg-opacity-40 absolute top-0 left-0 z-[5] hidden group-hover:block'>
+         <div className='w-full h-full flex items-center justify-center'>
+          <button className='text-white bg-headingColor hover:bg-smallTextColor  py-2 px-4 rounded-[8px] font-[500] ease-in duration-200'>
             See Details
           </button>
           </div>
@@ -49,6 +61,12 @@ const Portfolio = () => {
         </div>
       ))}
     </div>
+
+    <div className='text-center mt-6'>
+          <button onClick={loadMoreMandler} className='text-white bg-headingColor hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200'>
+            Load more
+          </button>
+          </div>
    </div>
   </section>
   )
