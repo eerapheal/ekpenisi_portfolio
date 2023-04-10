@@ -5,10 +5,28 @@ const Portfolio = () => {
 
   const [nextItems, setNextItems] = useState(6);
   const [portfolios, setPortfolios] = useState(data);
+  const [selectTab, setSelectTab] = useState('all');
 
   const loadMoreMandler = () => {
-    setNextItems(prev =>prev + 3 )
-  }
+    setNextItems(prev =>prev + 3 );
+  };
+
+  useEffect(() => {
+
+    if(selectTab === 'all') {
+      setPortfolios(data)
+    }
+
+    if(selectTab === 'Web Design') {
+      const filteredData = data.filter(item => item.category ==='Web Design')
+      setPortfolios(filteredData)
+    }
+
+    if(selectTab === 'Ux') {
+      const filteredData = data.filter(item => item.category ==='Ux')
+      setPortfolios(filteredData)
+    }
+  }, [selectTab])
   return (
   <section id='portfolio'>
    <div className='container'>
@@ -22,17 +40,17 @@ const Portfolio = () => {
       
       <div class='flex gap-3'>
       <div className='flex'>
-        <button className='text-smallTextColor border border-solid border-smallTextColor py-2 px-4'>
+        <button onClick={() => setSelectTab('all')} className='text-smallTextColor border border-solid border-smallTextColor py-2 px-4'>
           All
         </button>
       </div>
       <div className='flex '>
-        <button className='text-smallTextColor border border-solid border-smallTextColor py-2 px-4'>
+        <button onClick={() => setSelectTab('Web Design')} className='text-smallTextColor border border-solid border-smallTextColor py-2 px-4'>
           Web Design
         </button>
       </div>
       <div className='flex'>
-        <button className='text-smallTextColor border border-solid border-smallTextColor py-2 px-4'>
+        <button onClick={() => setSelectTab('Ux')} className='text-smallTextColor border border-solid border-smallTextColor py-2 px-4'>
           UX Design
         </button>
       </div>
@@ -48,7 +66,7 @@ const Portfolio = () => {
         >
           
          <figure>
-          <img className="rounded-[8px]" src={portfolio.imgUrl} alt='portfolio-image'/>
+          <img className="rounded-[8px]" src={portfolio.imgUrl} alt='portfolio'/>
          </figure>
 
          <div className='w-full h-full bg-primaryColor bg-opacity-40 absolute top-0 left-0 z-[5] hidden group-hover:block'>
@@ -63,10 +81,12 @@ const Portfolio = () => {
     </div>
 
     <div className='text-center mt-6'>
-          <button onClick={loadMoreMandler} className='text-white bg-headingColor hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200'>
-            Load more
-          </button>
-          </div>
+      {nextItems < portfolios.lenght && data.length > 6 && (
+        <button onClick={loadMoreMandler} className='text-white bg-headingColor hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200'>
+        Load more
+      </button>
+      )}     
+      </div>
    </div>
   </section>
   )
