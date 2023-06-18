@@ -1,7 +1,5 @@
 import React from 'react';
 import heroImg from '../../assets/images/hero.png';
-import CountUp from 'react-countup'
-
 const View = () => {
 
   return ( 
@@ -57,7 +55,7 @@ const View = () => {
               </span>
               <span>
                 <a 
-                  href="https://www.twitter.com/ekpenisiraphael" target="_blank" className="text-smallTextColor text-[18px] font-[600]" alt="Twitter">
+                  href="https://www.twitter.com/ekpenisiraphael" className="text-smallTextColor text-[18px] font-[600]" alt="Twitter">
                   <i class="ri-twitter-fill"></i>
                 </a>
               </span>
