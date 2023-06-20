@@ -6,7 +6,7 @@ import Footer from './components/Footer/Footer.jsx';
 import View from './components/View/View.jsx';
 import Service from './components/Service/Service.jsx';
 import Portfolio from './components/Portfolio/Portfolio.jsx';
-
+import Contact from './components/Contact/Contact.jsx';
 
 const App = () => {
     useEffect(()=> {
@@ -19,6 +19,7 @@ const App = () => {
       <View />
       <Service />
       <Portfolio />
+      <Contact />
      </main>
     <Footer />
     </>
