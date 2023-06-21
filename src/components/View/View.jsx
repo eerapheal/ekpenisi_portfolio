@@ -45,7 +45,7 @@ const View = () => {
             <div
               className="flex items-center gap-9 mt-14">
               <span className="text-smallTextColor max-w-[590px] font-[500]">
-                Follow me:
+              connect with me:
               </span>
               <span>
                 <a 
